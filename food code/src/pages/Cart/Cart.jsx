@@ -26,7 +26,7 @@ const Cart = () => {
             return ( <>
                 <div className='cart-items-title cart-items-item'>
                   <p>{item.name}</p>
-                  <div/>  
+                  </div>  
               
            </> )
           }
