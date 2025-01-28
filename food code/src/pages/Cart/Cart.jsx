@@ -7,7 +7,6 @@ const Cart = () => {
 
     
   return ( 
-    <>
     <div className='cart'>
       <div className="cart-items">
         <div className="cart-item-title">
@@ -20,23 +19,28 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item,index)=>{
+        {food_list.map((item,index) => {
           if(cartItems[item._id]>0)
           {
+
             return ( <>
                 <div className='cart-items-title cart-items-item'>
-                  <p>{item.name}</p>
-                  </div>  
+                    <img src={item.image} alt="" />
+                    <p>{item.name}</p>
+                    <p>{item.price}</p>
+                    <p>{cartItems[item._id]}</p>
+                    <p>{item.price*cartItems[item._id]}</p>
+                    <p>x</p>
+                </div> 
+                </> 
               
-           </> )
+            );
           }
-        })}
         
-
+        })}
       </div>
        
     </div>
-    </>
   );
 }; 
 
